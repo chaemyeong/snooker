@@ -43,7 +43,8 @@ var pixelSize = function (width) {
     return [ newNext - width ];
   };
   var setTableWidth = function (table, newWidths, _delta) {
-    var total = Arr.foldr(newWidths, function (b, a) { return b + a; }, 0);
+    // var total = Arr.foldr(newWidths, function (b, a) { return b + a; }, 0);
+    var total = newWidths + _delta; // test by vamf5   
     Sizes.setPixelWidth(table, total);
   };
   return {

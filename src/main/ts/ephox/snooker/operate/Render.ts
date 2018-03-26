@@ -31,7 +31,8 @@ var render = function (rows, columns, rowHeaders, columnHeaders) {
     'border-collapse': 'collapse',
     width: '100%'
   });
-  Attr.set(table, 'border', '1');
+  // Attr.set(table, 'border', '1');
+  Attr.set(table, 'border', '0'); // by vamf5
 
   var tbody = tableBody();
   Insert.append(table, tbody);
@@ -49,6 +50,7 @@ var render = function (rows, columns, rowHeaders, columnHeaders) {
       // Note, this is a placeholder so that the cells have height. The unicode character didn't work in IE10.
       Insert.append(td, Element.fromTag('br'));
       Css.set(td, 'width', (100 / columns) + '%');
+      Css.set(td, 'border', '1px solid black'); // by vamf5
       Insert.append(tr, td);
     }
     trs.push(tr);
