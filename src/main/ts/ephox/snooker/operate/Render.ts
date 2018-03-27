@@ -64,8 +64,8 @@ var render = (rows: number, columns: number, rowHeaders: number, columnHeaders: 
       Insert.append(td, Element.fromTag('br'));
       if (renderOpts.percentages) {
         Css.set(td, 'width', (100 / columns) + '%');
-        Css.set(td, 'border', '1px solid black'); // by vamf5
       }
+      Css.set(td, 'border', '1px solid black'); // by vamf5
       Insert.append(tr, td);
     }
     trs.push(tr);
